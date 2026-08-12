@@ -1,7 +1,7 @@
 /* BorrowBox frontend logic - plain JS, no frameworks. */
 
 // Change this if your backend runs somewhere else.
-const API_BASE = window.BorrowBox_API_BASE || "https://borrowbox-lgf9.onrender.com";
+const API_BASE = window.BorrowBox_API_BASE || "https://borrowbox-backend-lgf9.onrender.com";
 
 const CATEGORY_EMOJI = {
   Property: "🏠", Furniture: "🛋️", Electronics: "🔌", Vehicles: "🚗",
