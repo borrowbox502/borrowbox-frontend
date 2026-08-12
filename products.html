@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Listings - BorrowBox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="products">
+
+  <nav class="navbar" id="navbar-mount"></nav>
+
+  <main class="container">
+    <h2 class="section-title">Browse Listings</h2>
+
+    <form class="filters-bar" id="filters-form">
+      <input type="text" id="filter-search" placeholder="Search title or description">
+      <select id="filter-category">
+        <option value="">All Categories</option>
+      </select>
+      <input type="text" id="filter-location" placeholder="Location">
+      <select id="filter-type">
+        <option value="">Buy or Rent</option>
+        <option value="buy">Buy only</option>
+        <option value="rent">Rent only</option>
+      </select>
+      <button type="submit" class="btn btn-primary">Apply Filters</button>
+    </form>
+
+    <div class="product-grid" id="products-grid">
+      <div class="empty-state">Loading listings...</div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 BorrowBox - a college project MVP.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

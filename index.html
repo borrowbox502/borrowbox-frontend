@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BorrowBox - Rent or Buy Almost Anything</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="home">
+
+  <nav class="navbar" id="navbar-mount"></nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Rent or Buy Almost Anything</h1>
+      <p>Furniture, electronics, vehicles, gaming gear and more - from people near you.</p>
+      <form class="search-bar" id="hero-search-form">
+        <input type="text" id="hero-search-input" placeholder="Search for gaming PC, sofa, camera...">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2 class="section-title">Browse Categories</h2>
+      <div class="category-grid" id="category-grid">
+        <div class="empty-state">Loading categories...</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Featured Listings</h2>
+      <div class="product-grid" id="featured-grid">
+        <div class="empty-state">Loading listings...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 BorrowBox - a college project MVP.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

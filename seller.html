@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Dashboard - BorrowBox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="seller">
+
+  <nav class="navbar" id="navbar-mount"></nav>
+
+  <main class="container">
+    <div class="dashboard-header">
+      <h2 class="section-title" id="seller-welcome" style="margin:0;">Welcome back!</h2>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="tab-listings">My Listings</button>
+      <button class="tab-btn" data-tab="tab-add">Add Listing</button>
+      <button class="tab-btn" data-tab="tab-transactions">Transactions</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-listings">
+      <div id="seller-listings">
+        <div class="empty-state">Loading...</div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-add">
+      <div class="form-card" style="margin: 0 0 30px;">
+        <h2>Add Listing</h2>
+        <div class="error-msg" id="add-listing-error"></div>
+        <div class="success-msg" id="add-listing-success"></div>
+
+        <form id="add-listing-form">
+          <div class="form-group">
+            <label for="add-title">Title</label>
+            <input type="text" id="add-title" required>
+          </div>
+
+          <div class="form-group">
+            <label for="add-description">Description</label>
+            <textarea id="add-description" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="add-category">Category</label>
+              <select id="add-category" required>
+                <option value="" disabled selected>Choose category</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="add-location">Location</label>
+              <input type="text" id="add-location" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="add-image">Image(s)</label>
+            <input type="file" id="add-image" accept="image/jpeg,image/jpg,image/png,image/webp" multiple required>
+          </div>
+
+          <div class="form-group checkbox-row">
+            <input type="checkbox" id="add-available-sale">
+            <label for="add-available-sale" style="margin:0;">Available for Sale</label>
+          </div>
+          <div class="form-group" id="sale-price-fields" style="display:none;">
+            <label for="add-buy-price">Buy Price (₹)</label>
+            <input type="number" id="add-buy-price" min="0" step="1">
+          </div>
+
+          <div class="form-group checkbox-row">
+            <input type="checkbox" id="add-available-rent">
+            <label for="add-available-rent" style="margin:0;">Available for Rent</label>
+          </div>
+          <div class="form-row" id="rent-price-fields" style="display:none;">
+            <div class="form-group">
+              <label for="add-rent-price">Rent Price (₹)</label>
+              <input type="number" id="add-rent-price" min="0" step="1">
+            </div>
+            <div class="form-group">
+              <label for="add-rent-period">Rent Period</label>
+              <select id="add-rent-period">
+                <option value="day">Per day</option>
+                <option value="week">Per week</option>
+                <option value="month" selected>Per month</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Publish Listing</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-transactions">
+      <div id="seller-transactions">
+        <div class="empty-state">Loading...</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 BorrowBox - a college project MVP.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

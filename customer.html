@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account - BorrowBox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="customer">
+
+  <nav class="navbar" id="navbar-mount"></nav>
+
+  <main class="container">
+    <h2 class="section-title" id="customer-welcome">Welcome back!</h2>
+
+    <div class="list-card mb-16">
+      <div class="info">
+        <h4>Profile</h4>
+        <div class="meta">Email: <span id="customer-email"></span></div>
+        <div class="meta">Phone: <span id="customer-phone"></span></div>
+      </div>
+    </div>
+
+    <h3 class="section-title">My Purchases &amp; Rentals</h3>
+    <div id="customer-transactions">
+      <div class="empty-state">Loading...</div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 BorrowBox - a college project MVP.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
